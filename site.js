@@ -55,11 +55,11 @@ const SITE = {
 
   /* ---------- the rooftop scene: real Ninja Rooftops ninjas running and leaping across a dusk skyline ----------
      Sprite sheets come straight from the game: 10 cells of 192x192 (8 run frames, 2 air frames), ninja centre at (124, 100). */
-  const SHEETS = {}; const sheet = n => SHEETS[n] || (SHEETS[n] = Object.assign(new Image(), { src: `ninja${n}.png` }));
+  const SHEETS = {}; const sheet = n => SHEETS[n] || (SHEETS[n] = Object.assign(new Image(), { src: `ninja${n}.webp` }));
   function rng(seed) { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; }
   function scene(cv) {
     const g = cv.getContext('2d'), ids = (cv.dataset.ninjas || '0,1,3').split(',').map(Number), dense = cv.dataset.size === 'big';
-    let W = 0, H = 0, dpr = 1, k = 1, cam = 0, roofs = [], ninjas = [], puffs = [], stars = [], R = rng(7), last = 0, run = true, visible = true;
+    let W = 0, H = 0, dpr = 1, k = 1, cam = 0, roofs = [], ninjas = [], puffs = [], stars = [], R = rng(7), last = 0, run = true, visible = true, mx = 0, my = 0, tmx = 0, tmy = 0;
     const GRAV = () => 4200 * k, SPEED = () => 230 * k;
     function size() {
       const r = cv.getBoundingClientRect(); dpr = Math.min(2, devicePixelRatio || 1); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; k = Math.max(0.55, Math.min(1.25, H / 620));
@@ -107,7 +107,7 @@ const SITE = {
       puffs.forEach(p => p.t += dt); puffs = puffs.filter(p => p.t < 0.5);
     }
     function skyline(par, base, hgt, col, seed, win) {
-      const r = rng(seed), off = (cam * par) % 2400;
+      const r = rng(seed), off = ((cam * par + mx * 60 * par) % 2400 + 2400) % 2400;
       g.fillStyle = col;
       for (let x = -off - 200, i = 0; x < W + 200; i++) {
         const w = (60 + r() * 90) * k, h = (hgt * (0.5 + r() * 0.6)) * k;
@@ -134,9 +134,10 @@ const SITE = {
       const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#150b38'); sky.addColorStop(0.55, '#5a2a7a'); sky.addColorStop(1, '#ff8a5c'); g.fillStyle = sky; g.fillRect(0, 0, W, H);
       for (const s of stars) { g.globalAlpha = 0.4 + 0.6 * Math.abs(Math.sin(t * 1.3 + s.p)); g.fillStyle = '#fff'; g.beginPath(); g.arc(s.x, s.y, s.r, 0, 7); g.fill(); }
       g.globalAlpha = 1;
-      const mx = W * (dense ? 0.78 : 0.82), my = H * 0.2, mr = 46 * k;
-      const mg = g.createRadialGradient(mx, my, mr * 0.6, mx, my, mr * 3.2); mg.addColorStop(0, 'rgba(255,246,216,.45)'); mg.addColorStop(1, 'rgba(255,246,216,0)'); g.fillStyle = mg; g.fillRect(0, 0, W, H);
-      g.fillStyle = '#fff6d8'; g.beginPath(); g.arc(mx, my, mr, 0, 7); g.fill(); g.fillStyle = 'rgba(210,196,170,.6)'; [[-.3, -.2, .22], [.25, .15, .16], [-.05, .38, .12]].forEach(([a, b, c]) => { g.beginPath(); g.arc(mx + a * mr, my + b * mr, c * mr, 0, 7); g.fill(); });
+      mx += (tmx - mx) * 0.06; my += (tmy - my) * 0.06;
+      const moonX = W * (dense ? 0.78 : 0.82) - mx * 18, moonY = H * 0.2 - my * 10, mr = 46 * k;
+      const mg = g.createRadialGradient(moonX, moonY, mr * 0.6, moonX, moonY, mr * 3.2); mg.addColorStop(0, 'rgba(255,246,216,.45)'); mg.addColorStop(1, 'rgba(255,246,216,0)'); g.fillStyle = mg; g.fillRect(0, 0, W, H);
+      g.fillStyle = '#fff6d8'; g.beginPath(); g.arc(moonX, moonY, mr, 0, 7); g.fill(); g.fillStyle = 'rgba(210,196,170,.6)'; [[-.3, -.2, .22], [.25, .15, .16], [-.05, .38, .12]].forEach(([a, b, c]) => { g.beginPath(); g.arc(moonX + a * mr, moonY + b * mr, c * mr, 0, 7); g.fill(); });
       skyline(0.15, H * 0.62, 150, '#4a2766', 11, false);
       skyline(0.4, H * 0.7, 120, '#2a1450', 23, true);
       for (const r of roofs) { const x = r.x - cam; if (x < W + 40 && x + r.w > -40) drawRoof(r, x); }
@@ -157,14 +158,18 @@ const SITE = {
     }
     if (dense) {                                              // tap the night scene: every ninja on a roof leaps with a flip
       cv.style.cursor = 'pointer';
-      cv.addEventListener('pointerdown', () => {
+      const leapAll = () => {
         let any = false;
         for (const n of ninjas) { if (n.air) continue; const wx = cam + n.sx, r = roofAt(wx), nx = nextRoof(wx); if (!r) continue;
           const edge = r.x + r.w - wx, target = edge > 140 * k ? wx + 120 * k : nx ? nx.x + Math.min(34 * k, nx.w * 0.25) : wx + 60 * k, ty = edge > 140 * k ? r.top : nx ? nx.top : r.top;
           const T = Math.max(0.45, (target - wx) / SPEED()), vy = (ty - n.y - 0.5 * GRAV() * T * T) / T;
           n.air = true; n.vy = vy; n.spinV = Math.PI * 2 / T; n.spin = 0; any = true; }
         if (any && window.SLG_FX) window.SLG_FX('leap');
-      });
+        const hint = document.querySelector('.tap-hint'); if (hint) hint.classList.add('gone');
+      };
+      cv.addEventListener('pointerdown', leapAll);
+      const hint = document.querySelector('.tap-hint'); if (hint) hint.addEventListener('click', leapAll);
+      if (matchMedia('(hover: hover)').matches) addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); if (e.clientY > r.bottom) return; tmx = (e.clientX - r.left) / r.width - 0.5; tmy = (e.clientY - r.top) / r.height - 0.5; }, { passive: true });
     }
     size(); addEventListener('resize', () => { const oldW = W; size(); if (Math.abs(W - oldW) > 40) reset(); });
     ids.forEach(sheet);
@@ -182,6 +187,42 @@ const SITE = {
     const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { toc.forEach(a => a.classList.remove('on')); const a = map.get(e.target.id); if (a) a.classList.add('on'); } }), { rootMargin: '-20% 0px -70% 0px' });
     map.forEach((a, id) => { const el = document.getElementById(id); if (el) io2.observe(el); });
   }
+
+  // ---------- numbers count up when they come into view ----------
+  const counters = [...document.querySelectorAll('.stat b')];
+  if (counters.length && !reduce && 'IntersectionObserver' in window) {
+    const io3 = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io3.unobserve(e.target); const el = e.target, m = el.textContent.match(/^(\d+)(.*)$/); if (!m) return;
+      const end = +m[1], suf = m[2], t0 = performance.now(), dur = 1100 + Math.min(900, end * 2);
+      const tick = now => { const k = Math.min(1, (now - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - k, 3))); el.textContent = v + suf; if (k < 1) requestAnimationFrame(tick); };
+      el.textContent = '0' + suf; requestAnimationFrame(tick); }), { threshold: 0.6 });
+    counters.forEach(c => io3.observe(c));
+  }
+
+  // ---------- game page: a slim "Join the beta" bar once the hero is gone, hidden again at the beta section ----------
+  const bar = document.querySelector('.cta-bar'), heroEl = document.querySelector('.nr-hero'), betaEl = document.getElementById('beta');
+  if (bar && heroEl) {
+    const upd = () => { const hb = heroEl.getBoundingClientRect().bottom, bt = betaEl ? betaEl.getBoundingClientRect() : null, atBeta = bt && bt.top < innerHeight * 0.9 && bt.bottom > 0, show = hb < 0 && !atBeta;
+      bar.classList.toggle('show', show); document.body.classList.toggle('cta-on', show); bar.setAttribute('aria-hidden', !show); bar.querySelector('a').tabIndex = show ? 0 : -1; };
+    addEventListener('scroll', upd, { passive: true }); upd();
+  }
+
+  // ---------- live Discord numbers (shown only when the server is big enough to be worth showing) ----------
+  const liveEls = document.querySelectorAll('[data-discord]');
+  if (liveEls.length) {
+    const code = (SITE.discord.match(/discord\.gg\/([\w-]+)/) || [])[1];
+    if (code && window.fetch) fetch(`https://discord.com/api/v9/invites/${code}?with_counts=true`).then(r => r.ok ? r.json() : null).then(d => {
+      if (!d || !d.approximate_member_count || d.approximate_member_count < 25) return;
+      const on = d.approximate_presence_count || 0, txt = d.approximate_member_count.toLocaleString() + ' players in our Discord' + (on >= 5 ? ' · ' + on.toLocaleString() + ' online now' : '');
+      liveEls.forEach(el => { el.querySelector('span').textContent = txt; el.hidden = false; });
+    }).catch(() => {});
+  }
+
+  // ---------- Pip watches your cursor ----------
+  const looks = [...document.querySelectorAll('.pip .look')];
+  if (looks.length && !reduce && matchMedia('(hover: hover)').matches) addEventListener('pointermove', e => {
+    looks.forEach(l => { const r = l.closest('svg').getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height * 0.42, dx = e.clientX - cx, dy = e.clientY - cy, d = Math.hypot(dx, dy) || 1, m = Math.min(5, d / 40);
+      l.setAttribute('transform', `translate(${(dx / d * m).toFixed(1)} ${(dy / d * m * 0.8).toFixed(1)})`); });
+  }, { passive: true });
 
   // ---------- roster cards: each ninja runs on the spot ----------
   document.querySelectorAll('canvas.runner').forEach(cv => {
