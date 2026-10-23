@@ -4,111 +4,117 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Simple Life Games</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Simple Life Games is an independent studio making small, joyful mobile games, starting with Ninja Rooftops.">
+<meta name="description" content="Simple Life Games is an independent studio making small, cheerful mobile games, starting with Ninja Rooftops.">
 <meta property="og:title" content="Simple Life Games">
-<meta property="og:description" content="Simple Life Games is an independent studio making small, joyful mobile games, starting with Ninja Rooftops.">
+<meta property="og:description" content="Simple Life Games is an independent studio making small, cheerful mobile games, starting with Ninja Rooftops.">
 <meta property="og:image" content="slg-logo.png">
-<meta name="theme-color" content="#0a0f2e">
+<meta name="theme-color" content="#fff4e0">
 <link rel="icon" href="favicon.png">
+<link rel="icon" type="image/svg+xml" href="slg-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="index.html"><img src="slg-icon.png" alt="" width="40" height="40"><span>Simple <span class="life">Life</span> Games</span></a>
+    <a class="brand" href="index.html" aria-label="Simple Life Games home"><img class="mark" src="slg-icon.svg" alt="" width="50" height="50"><img class="wm" src="wordmark.svg" alt="Simple Life Games" height="34"></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="#games" aria-current="page">Games</a></li>
       <li><a href="ninja-rooftops.html">Ninja Rooftops</a></li>
       <li><a href="#videos">Videos</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">Studio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main id="main">
 <section class="hero">
-  <div class="sky"><canvas class="stars"></canvas><div class="glow" style="width:420px;height:420px;left:-120px;top:40px;background:#2f7bff"></div><div class="glow" style="width:300px;height:300px;right:6%;top:-60px;background:#ff9f1c;opacity:.25"></div>
-    <div class="cloud" style="top:16%;animation-duration:80s;animation-delay:-20s"></div><div class="cloud" style="top:58%;animation-duration:110s;animation-delay:-70s;transform:scale(.7)"></div></div>
+  <div class="sun" data-par="0.18" aria-hidden="true"></div>
+  <div class="cloud" style="top:120px;animation-duration:70s;animation-delay:-12s" aria-hidden="true"><svg viewBox="-60 -40 120 60" aria-hidden="true"><path d="M-40 10 C-56 10 -56 -10 -40 -10 C-38 -28 -12 -32 -4 -18 C4 -34 32 -30 32 -12 C50 -14 52 10 36 10 Z" fill="#fff" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/></svg></div>
+  <div class="cloud" style="top:260px;width:110px;animation-duration:95s;animation-delay:-60s" aria-hidden="true"><svg viewBox="-60 -40 120 60" aria-hidden="true"><path d="M-40 10 C-56 10 -56 -10 -40 -10 C-38 -28 -12 -32 -4 -18 C4 -34 32 -30 32 -12 C50 -14 52 10 36 10 Z" fill="#fff" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/></svg></div>
+  <div class="cloud" style="top:60px;width:90px;animation-duration:120s;animation-delay:-30s" aria-hidden="true"><svg viewBox="-60 -40 120 60" aria-hidden="true"><path d="M-40 10 C-56 10 -56 -10 -40 -10 C-38 -28 -12 -32 -4 -18 C4 -34 32 -30 32 -12 C50 -14 52 10 36 10 Z" fill="#fff" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/></svg></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">Independent game studio</span>
-      <h1>Simple games.<br><span class="hl">Big</span> <span class="hl2">little moments.</span></h1>
-      <p class="lede">We make bright, easy-to-learn games for your phone: one tap to start, plenty of reasons to keep coming back. Our first game, Ninja Rooftops, is in closed beta on Google Play.</p>
+      <span class="kicker"><i></i>Independent game studio</span>
+      <h1><span class="w" style="--i:0">Small</span> <span class="w" style="--i:1">games</span> <span class="w" style="--i:2">with</span> <span class="squiggle"><span class="w blue" style="--i:3">big</span><svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C30 3 50 18 78 9 S130 3 150 11 S185 14 197 6" fill="none" stroke="#ff5a4e" stroke-width="7" stroke-linecap="round"/></svg></span> <span class="w" style="--i:4">hearts.</span></h1>
+      <p class="lede">We make bright, easy-to-learn games for your phone: one tap to start, and plenty of reasons to come back tomorrow. Our first game, Ninja Rooftops, is in closed beta on Google Play.</p>
       <div class="btns">
-        <a class="btn btn-sun" href="ninja-rooftops.html">Play Ninja Rooftops <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost" data-link="youtube" href="https://www.youtube.com/@simplelifegames"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg> Watch on YouTube</a>
+        <a class="btn btn-sun" href="ninja-rooftops.html">Play Ninja Rooftops <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" data-link="youtube" href="https://www.youtube.com/@simplelifegames"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg> Watch on YouTube</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="ring"></div><div class="ring two"></div>
-      <img class="logo" src="slg-logo.png" alt="Simple Life Games logo" width="520" height="512">
-      <span class="spark" style="left:2%;top:18%"><svg viewBox="0 0 24 24" fill="#ffd86a"><path d="M12 0c.8 6.5 4.5 10.6 12 12-7.5 1.4-11.2 5.5-12 12-.8-6.5-4.5-10.6-12-12C7.5 10.6 11.2 6.5 12 0Z"/></svg></span>
-      <span class="spark" style="right:4%;top:8%;animation-delay:-.9s;width:24px;height:24px"><svg viewBox="0 0 24 24" fill="#ffd86a"><path d="M12 0c.8 6.5 4.5 10.6 12 12-7.5 1.4-11.2 5.5-12 12-.8-6.5-4.5-10.6-12-12C7.5 10.6 11.2 6.5 12 0Z"/></svg></span>
-      <span class="spark" style="right:0;bottom:22%;animation-delay:-1.7s;width:14px;height:14px"><svg viewBox="0 0 24 24" fill="#ffd86a"><path d="M12 0c.8 6.5 4.5 10.6 12 12-7.5 1.4-11.2 5.5-12 12-.8-6.5-4.5-10.6-12-12C7.5 10.6 11.2 6.5 12 0Z"/></svg></span>
+    <div class="hero-art">
+      <div class="speech">Hi! I'm Pip.</div>
+      <div class="pip-shadow" aria-hidden="true"></div>
+      <svg class="pip" role="img" aria-label="Pip, the Simple Life Games mascot" xmlns="http://www.w3.org/2000/svg" viewBox="-150 -120 300 230"><style>.arm-wave{transform-box:fill-box;transform-origin:85% 85%;animation:wave 2.4s ease-in-out infinite}@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-14deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-10deg)}}.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.6s infinite}@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}</style><g transform="translate(0 0) scale(1)"><path d="M-58 54 Q-62 74 -60 88" fill="none" stroke="#2a1b3d" stroke-width="15" stroke-linecap="round"/><ellipse cx="-66" cy="92" rx="18" ry="10" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="6"/><path d="M58 54 Q62 74 60 88" fill="none" stroke="#2a1b3d" stroke-width="15" stroke-linecap="round"/><ellipse cx="66" cy="92" rx="18" ry="10" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="6"/><g class="arm-wave"><path d="M-86 -24 C-112 -40 -122 -66 -118 -92" fill="none" stroke="#2a1b3d" stroke-width="17" stroke-linecap="round"/><path d="M-86 -24 C-112 -40 -122 -66 -118 -92" fill="none" stroke="#fff7ea" stroke-width="7" stroke-linecap="round"/><circle cx="-118" cy="-96" r="13" fill="#fff7ea" stroke="#2a1b3d" stroke-width="7"/></g><path d="M88 -8 C110 4 120 20 116 36" fill="none" stroke="#2a1b3d" stroke-width="17" stroke-linecap="round"/><path d="M88 -8 C110 4 120 20 116 36" fill="none" stroke="#fff7ea" stroke-width="7" stroke-linecap="round"/><circle cx="116" cy="40" r="13" fill="#fff7ea" stroke="#2a1b3d" stroke-width="7"/><path d="M0 -60 C-2 -86 26 -94 24 -76 C22 -64 6 -68 12 -80" fill="none" stroke="#2a1b3d" stroke-width="7" stroke-linecap="round"/><clipPath id="hpb"><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z"/></clipPath><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z" fill="#fff7ea"/><g clip-path="url(#hpb)"><ellipse cx="0" cy="70" rx="130" ry="44" fill="#ecdcc4"/><path d="M-70 -50 C-40 -56 -10 -56 10 -54" stroke="#ffffff" stroke-width="7" stroke-linecap="round" fill="none"/></g><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z" fill="none" stroke="#2a1b3d" stroke-width="8" stroke-linejoin="round"/><path d="M-66 -34 h14 v12 h12 v14 h-12 v12 h-14 v-12 h-12 v-14 h12 Z" transform="translate(4 6)" fill="#4a3a6a" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/><circle cx="60" cy="-32" r="8.5" fill="#6fd36a" stroke="#2a1b3d" stroke-width="4"/><circle cx="57.5" cy="-35" r="2.2" fill="#fff" opacity=".8"/><circle cx="76" cy="-16" r="8.5" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="4"/><circle cx="73.5" cy="-19" r="2.2" fill="#fff" opacity=".8"/><circle cx="60" cy="0" r="8.5" fill="#3fa9f5" stroke="#2a1b3d" stroke-width="4"/><circle cx="57.5" cy="-3" r="2.2" fill="#fff" opacity=".8"/><circle cx="44" cy="-16" r="8.5" fill="#ffd23f" stroke="#2a1b3d" stroke-width="4"/><circle cx="41.5" cy="-19" r="2.2" fill="#fff" opacity=".8"/><g class="eyes"><ellipse cx="-14" cy="-24" rx="6" ry="9" fill="#2a1b3d"/><ellipse cx="16" cy="-24" rx="6" ry="9" fill="#2a1b3d"/><circle cx="-12" cy="-27" r="2.2" fill="#fff"/><circle cx="18" cy="-27" r="2.2" fill="#fff"/></g><circle cx="-30" cy="-6" r="7" fill="#ff7aa8" opacity=".75"/><circle cx="32" cy="-6" r="7" fill="#ff7aa8" opacity=".75"/><path d="M-13 -6 Q1 16 15 -6 Z" fill="#7a1f3a" stroke="#2a1b3d" stroke-width="4.5" stroke-linejoin="round"/><path d="M-6 4 Q1 10 8 4 Q1 0 -6 4Z" fill="#ff7aa8"/></g></svg>
     </div>
   </div>
-  <div class="hills" aria-hidden="true"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#0f1640" d="M0 60c140-30 260-36 400-18s240 30 380 8 260-40 400-26 200 30 260 24v42H0Z"/><path fill="#0a0f2e" d="M0 78c180-20 320-20 480-6s300 16 460 0 320-18 500 2v16H0Z"/></svg></div>
+  <div class="hills"><svg viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 120 C180 60 330 70 470 105 C620 145 760 150 900 110 C1060 64 1230 60 1440 108 V240 H0Z" fill="#6fd36a" stroke="#2a1b3d" stroke-width="4"/>
+  <g transform="translate(1180 64)"><rect x="-6" y="0" width="12" height="40" rx="4" fill="#9a5a2a" stroke="#2a1b3d" stroke-width="4"/><circle cx="0" cy="-8" r="30" fill="#4fb84f" stroke="#2a1b3d" stroke-width="4"/><circle cx="-12" cy="-16" r="6" fill="#8be27f"/></g>
+  <path d="M0 170 C220 130 420 150 640 172 C860 196 1080 180 1260 150 C1340 138 1400 140 1440 146 V240 H0Z" fill="#4fb84f" stroke="#2a1b3d" stroke-width="4"/>
+  <path d="M0 214 C300 196 600 206 900 218 C1120 226 1300 214 1440 206 V240 H0Z" fill="#fff4e0"/>
+</svg></div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Easy to learn <b>✦</b> Fair to play <b>✦</b> Made with our players <b>✦</b> Tap. Leap. Land. Climb! <b>✦</b></span><span>Easy to learn <b>✦</b> Fair to play <b>✦</b> Made with our players <b>✦</b> Tap. Leap. Land. Climb! <b>✦</b></span><span>Easy to learn <b>✦</b> Fair to play <b>✦</b> Made with our players <b>✦</b> Tap. Leap. Land. Climb! <b>✦</b></span><span>Easy to learn <b>✦</b> Fair to play <b>✦</b> Made with our players <b>✦</b> Tap. Leap. Land. Climb! <b>✦</b></span></div></div>
 
 <section class="section" id="games">
   <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">Our games</span><h2>Pick one up. You might not put it down.</h2></div>
-    <div class="games">
-      <a class="game-card reveal" href="ninja-rooftops.html">
-        <div class="cover"><img src="nr-feature.jpg" alt="Ninja Rooftops: Tap. Leap. Land. Climb!" width="1024" height="500"></div>
-        <div class="body">
-          <div class="title-row"><img src="nr-icon.png" alt="" width="58" height="58"><div><h3>Ninja Rooftops</h3><span class="tag">TAP. LEAP. LAND. CLIMB!</span></div></div>
-          <p>A one-tap rooftop runner. Leap across 501 worlds, open chests, raise pets and fight clan bosses with friends.</p>
-          <div class="chips"><span class="chip leaf">Android</span><span class="chip sun">Closed beta</span><span class="chip">Free to play</span></div>
-          <span class="go">View game <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
-      <div class="game-card soon reveal d1">
-        <div class="cover"><svg class="soon-art" viewBox="0 0 120 120" aria-hidden="true"><rect x="14" y="34" width="92" height="56" rx="28" fill="#2a3a8c" stroke="#aab4e8" stroke-width="3" stroke-dasharray="6 6"/><path d="M36 54v16M28 62h16" stroke="#ffc83d" stroke-width="6" stroke-linecap="round"/><circle cx="80" cy="56" r="6" fill="#5bd17c"/><circle cx="92" cy="66" r="6" fill="#ff6b4a"/><path d="M60 14v10M46 18l4 8M74 18l-4 8" stroke="#ffc83d" stroke-width="4" stroke-linecap="round"/></svg></div>
-        <div class="body">
-          <h3>Next game</h3>
-          <span class="tag" style="color:var(--mute)">IN THE WORKSHOP</span>
-          <p>Something new is being built. Join the Discord to see it first and help shape it.</p>
-          <a class="go" data-link="discord" href="https://discord.gg/74Zpkr4ST">Join the Discord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
+    <div class="head reveal"><span class="kicker"><i></i>Our games</span><h2>Pick one up. You might not put it down.</h2></div>
+    <a class="card game-feature reveal" href="ninja-rooftops.html">
+      <div class="art"><canvas class="rooftops" data-ninjas="0,3,5" aria-label="Animated Ninja Rooftops scene: ninjas leaping across rooftops at dusk"></canvas></div>
+      <div class="info">
+        <div class="app-id"><img src="nr-icon.png" alt="" width="76" height="76"><div><small>Now in closed beta</small><h3 style="font-size:2rem">Ninja Rooftops</h3></div></div>
+        <p class="lede" style="font-size:1.05rem">A one-tap rooftop runner. Leap across 500 worlds, open chests, raise pets, take on Hardcore mode and fight clan bosses with friends.</p>
+        <div class="chips"><span class="chip g">Android</span><span class="chip y">Closed beta</span><span class="chip">Free to play</span></div>
+        <span class="go">See the game <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-    </div>
+    </a>
+    <a class="card soon reveal" data-d="0.1" data-link="discord" href="https://discord.gg/74Zpkr4ST">
+      <svg class="tools" viewBox="0 0 100 100" aria-hidden="true"><g class="gear"><path d="M50 22 l6 0 2 8 7 3 7 -5 5 4 -5 7 3 7 8 2 0 6 -8 2 -3 7 5 7 -4 5 -7 -5 -7 3 -2 8 -6 0 -2 -8 -7 -3 -7 5 -5 -4 5 -7 -3 -7 -8 -2 0 -6 8 -2 3 -7 -5 -7 4 -5 7 5 7 -3 Z" transform="translate(-3 0)" fill="#ffd23f" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/><circle cx="50" cy="50" r="9" fill="#fff" stroke="#2a1b3d" stroke-width="4"/></g></svg>
+      <div><h3>Something new is in the workshop</h3><p class="lede" style="font-size:1rem">Join the Discord to see it first and help shape it.</p></div>
+      <span class="go">Join the Discord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
   </div>
 </section>
 
-<section class="section" id="videos" style="background:linear-gradient(180deg,var(--night),var(--deep) 60%,var(--night))">
+<section class="section videos" id="videos">
   <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">Latest videos</span><h2>Trailers, Shorts and behind the scenes</h2><p class="lede">New videos go up on YouTube first. Subscribe to catch every update.</p></div>
-    <!-- VIDEO SLOTS: paste a YouTube video ID or full link into data-yt="" (works with Shorts links too) -->
-    <div class="video-grid">
-      <figure class="video wide reveal" data-yt=""><div class="frame"></div><figcaption>Featured video<small>Ninja Rooftops trailer</small></figcaption></figure>
-      <figure class="video short reveal d1" data-yt=""><div class="frame"></div><figcaption>Short<small>Gameplay clip</small></figcaption></figure>
-      <figure class="video short reveal d2" data-yt=""><div class="frame"></div><figcaption>Short<small>Pet chest opening</small></figcaption></figure>
-    </div>
+    <div class="head reveal"><span class="kicker"><i></i>Videos</span><h2>Trailers, Shorts and behind the scenes</h2><p class="lede">New videos land on YouTube first. Subscribe to catch every update.</p></div>
+    <!-- VIDEO SLOTS: paste a YouTube video ID or full link into data-yt="" (Shorts links work too) -->
+    <div class="video-grid"><figure class="video wide reveal" data-d="0" data-yt=""><div class="frame"></div><figcaption>Featured<small>Ninja Rooftops trailer</small></figcaption></figure><figure class="video short reveal" data-d="0.08" data-yt=""><div class="frame"></div><figcaption>Short<small>Gameplay clip</small></figcaption></figure><figure class="video short reveal" data-d="0.16" data-yt=""><div class="frame"></div><figcaption>Short<small>Pet chest opening</small></figcaption></figure></div>
   </div>
 </section>
 
 <section class="section" id="about">
   <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">About the studio</span><h2>Made for the five minutes you have, and the hours you didn't plan on.</h2><p class="lede">Simple Life Games is an independent studio. We build games that are easy to learn, look great on any phone, and treat players fairly.</p></div>
-    <div class="pillars">
-      <div class="pillar reveal"><div class="ic" style="background:rgba(255,200,61,.14);color:var(--sun)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14.5a5 5 0 0 0 8 0"/><path d="M9 9.5h.01M15 9.5h.01" stroke-width="3"/></svg></div><h3>Easy to pick up</h3><p>Every game starts with one simple action. Mastery comes from playing, not from reading a tutorial.</p></div>
-      <div class="pillar reveal d1"><div class="ic" style="background:rgba(91,209,124,.14);color:var(--leaf)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Fair to play</h3><p>Ads are something you choose to watch for a reward. Progress comes from playing, and nothing you earn is ever taken away.</p></div>
-      <div class="pillar reveal d2"><div class="ic" style="background:rgba(100,204,255,.14);color:var(--sky-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div><h3>Built with players</h3><p>Our testers and Discord community shape every update, from new features to the tiniest balance tweak.</p></div>
+    <div class="head reveal"><span class="kicker"><i></i>The studio</span><h2>Made for the five minutes you have, and the hour you didn't plan on.</h2><p class="lede">Simple Life Games is a small independent studio. We build games that are easy to learn, look great on any phone and treat players fairly.</p></div>
+    <div class="values">
+      <div class="card value reveal"><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="8" width="48" height="84" rx="10" fill="#8fd8ff" stroke="#2a1b3d" stroke-width="4"/><rect x="32" y="18" width="36" height="58" rx="4" fill="#fff" stroke="#2a1b3d" stroke-width="3"/>
+   <circle cx="50" cy="47" r="10" fill="#ffd23f" stroke="#2a1b3d" stroke-width="3"/><circle cx="50" cy="47" r="17" fill="none" stroke="#ff5a4e" stroke-width="3" stroke-dasharray="5 5"/>
+   <path d="M58 60 L58 48 a5 5 0 0 1 10 0 L68 58 l6 2 a6 6 0 0 1 4 7 l-3 14 H62 l-10 -12 a5 5 0 0 1 6 -7 z" fill="#ffd9b8" stroke="#2a1b3d" stroke-width="3.5" stroke-linejoin="round"/></svg><h3>Easy to pick up</h3><p>Every game starts with one simple action. You learn by playing, not by reading a tutorial.</p></div>
+      <div class="card value reveal" data-d="0.1"><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 L84 20 V48 C84 70 68 86 50 92 C32 86 16 70 16 48 V20 Z" fill="#6fd36a" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/>
+   <path d="M50 70 C36 60 30 52 30 44 a9 9 0 0 1 20 -4 a9 9 0 0 1 20 4 C70 52 64 60 50 70Z" fill="#ff7aa8" stroke="#2a1b3d" stroke-width="3.5" stroke-linejoin="round"/><path d="M38 40 q2 -4 6 -4" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Fair to play</h3><p>Ads are something you choose to watch for a reward. Progress comes from playing, and nothing you earn is taken away.</p></div>
+      <div class="card value reveal" data-d="0.2"><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 18 h52 a8 8 0 0 1 8 8 v22 a8 8 0 0 1 -8 8 H30 l-12 10 v-10 h-8 a8 8 0 0 1 -8 -8 V26 a8 8 0 0 1 8 -8Z" fill="#ffb02e" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/>
+   <path d="M44 44 h40 a8 8 0 0 1 8 8 v18 a8 8 0 0 1 -8 8 h-4 v10 l-12 -10 H44 a8 8 0 0 1 -8 -8 V52 a8 8 0 0 1 8 -8Z" fill="#8fd8ff" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/>
+   <circle cx="22" cy="37" r="3.5" fill="#2a1b3d"/><circle cx="36" cy="37" r="3.5" fill="#2a1b3d"/><circle cx="50" cy="37" r="3.5" fill="#2a1b3d"/><path d="M54 62 q10 8 20 0" stroke="#2a1b3d" stroke-width="4" fill="none" stroke-linecap="round"/></svg><h3>Built with players</h3><p>Our testers and Discord community shape every update, from big features to the tiniest balance tweak.</p></div>
     </div>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
-    <div><h2>Come hang out with the community</h2><p>Chat with other players, report bugs, vote on new features and get early looks at what we're building.</p></div>
-    <div class="btns"><a class="btn btn-white" data-link="discord" href="https://discord.gg/74Zpkr4ST"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 5.3A16.5 16.5 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0L8.5 4a16.5 16.5 0 0 0-4.1 1.3C1.8 9.2 1.1 13 1.4 16.7A16.6 16.6 0 0 0 6.5 19.3l1-1.6a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.8 11.8 0 0 0 11.6 0l.4.3a10.7 10.7 0 0 1-1.7.8l1 1.6a16.5 16.5 0 0 0 5.1-2.6c.4-4.3-.6-8-3-11.4ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a><a class="btn btn-line" data-link="youtube" href="https://www.youtube.com/@simplelifegames"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg> YouTube</a></div>
+    <div class="card reveal"><div class="dots"></div>
+      <svg class="pip-mini" role="img" aria-label="Pip, the Simple Life Games mascot" xmlns="http://www.w3.org/2000/svg" viewBox="-150 -120 300 230"><style>.arm-wave{transform-box:fill-box;transform-origin:85% 85%;animation:wave 2.4s ease-in-out infinite}@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-14deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-10deg)}}.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.6s infinite}@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}</style><g transform="translate(0 0) scale(1)"><path d="M-58 54 Q-62 74 -60 88" fill="none" stroke="#2a1b3d" stroke-width="15" stroke-linecap="round"/><ellipse cx="-66" cy="92" rx="18" ry="10" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="6"/><path d="M58 54 Q62 74 60 88" fill="none" stroke="#2a1b3d" stroke-width="15" stroke-linecap="round"/><ellipse cx="66" cy="92" rx="18" ry="10" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="6"/><g class="arm-wave"><path d="M-86 -24 C-112 -40 -122 -66 -118 -92" fill="none" stroke="#2a1b3d" stroke-width="17" stroke-linecap="round"/><path d="M-86 -24 C-112 -40 -122 -66 -118 -92" fill="none" stroke="#fff7ea" stroke-width="7" stroke-linecap="round"/><circle cx="-118" cy="-96" r="13" fill="#fff7ea" stroke="#2a1b3d" stroke-width="7"/></g><path d="M88 -8 C110 4 120 20 116 36" fill="none" stroke="#2a1b3d" stroke-width="17" stroke-linecap="round"/><path d="M88 -8 C110 4 120 20 116 36" fill="none" stroke="#fff7ea" stroke-width="7" stroke-linecap="round"/><circle cx="116" cy="40" r="13" fill="#fff7ea" stroke="#2a1b3d" stroke-width="7"/><path d="M0 -60 C-2 -86 26 -94 24 -76 C22 -64 6 -68 12 -80" fill="none" stroke="#2a1b3d" stroke-width="7" stroke-linecap="round"/><clipPath id="bpb"><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z"/></clipPath><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z" fill="#fff7ea"/><g clip-path="url(#bpb)"><ellipse cx="0" cy="70" rx="130" ry="44" fill="#ecdcc4"/><path d="M-70 -50 C-40 -56 -10 -56 10 -54" stroke="#ffffff" stroke-width="7" stroke-linecap="round" fill="none"/></g><path d="M-90 -30 C-90 -60 -62 -66 -42 -60 L42 -60 C62 -66 90 -60 90 -30 C96 8 102 48 78 60 C60 68 46 52 36 36 L-36 36 C-46 52 -60 68 -78 60 C-102 48 -96 8 -90 -30 Z" fill="none" stroke="#2a1b3d" stroke-width="8" stroke-linejoin="round"/><path d="M-66 -34 h14 v12 h12 v14 h-12 v12 h-14 v-12 h-12 v-14 h12 Z" transform="translate(4 6)" fill="#4a3a6a" stroke="#2a1b3d" stroke-width="4" stroke-linejoin="round"/><circle cx="60" cy="-32" r="8.5" fill="#6fd36a" stroke="#2a1b3d" stroke-width="4"/><circle cx="57.5" cy="-35" r="2.2" fill="#fff" opacity=".8"/><circle cx="76" cy="-16" r="8.5" fill="#ff5a4e" stroke="#2a1b3d" stroke-width="4"/><circle cx="73.5" cy="-19" r="2.2" fill="#fff" opacity=".8"/><circle cx="60" cy="0" r="8.5" fill="#3fa9f5" stroke="#2a1b3d" stroke-width="4"/><circle cx="57.5" cy="-3" r="2.2" fill="#fff" opacity=".8"/><circle cx="44" cy="-16" r="8.5" fill="#ffd23f" stroke="#2a1b3d" stroke-width="4"/><circle cx="41.5" cy="-19" r="2.2" fill="#fff" opacity=".8"/><g class="eyes"><ellipse cx="-14" cy="-24" rx="6" ry="9" fill="#2a1b3d"/><ellipse cx="16" cy="-24" rx="6" ry="9" fill="#2a1b3d"/><circle cx="-12" cy="-27" r="2.2" fill="#fff"/><circle cx="18" cy="-27" r="2.2" fill="#fff"/></g><circle cx="-30" cy="-6" r="7" fill="#ff7aa8" opacity=".75"/><circle cx="32" cy="-6" r="7" fill="#ff7aa8" opacity=".75"/><path d="M-13 -6 Q1 16 15 -6 Z" fill="#7a1f3a" stroke="#2a1b3d" stroke-width="4.5" stroke-linejoin="round"/><path d="M-6 4 Q1 10 8 4 Q1 0 -6 4Z" fill="#ff7aa8"/></g></svg>
+      <div><h2>Come hang out with us</h2><p>Chat with other players, report bugs, vote on what we build next and get early looks at new games.</p></div>
+      <div class="btns"><a class="btn" data-link="discord" href="https://discord.gg/74Zpkr4ST"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 5.3A16.5 16.5 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0L8.5 4a16.5 16.5 0 0 0-4.1 1.3C1.8 9.2 1.1 13 1.4 16.7A16.6 16.6 0 0 0 6.5 19.3l1-1.6a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.8 11.8 0 0 0 11.6 0l.4.3a10.7 10.7 0 0 1-1.7.8l1 1.6a16.5 16.5 0 0 0 5.1-2.6c.4-4.3-.6-8-3-11.4ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg> Join Discord</a></div>
+    </div>
   </div>
 </section>
 </main>
@@ -116,29 +122,21 @@
   <div class="wrap">
     <div class="foot">
       <div class="about">
-        <a class="brand" href="index.html"><img src="slg-icon.png" alt="" width="40" height="40"><span>Simple <span class="life">Life</span> Games</span></a>
-        <p>An independent studio making small, joyful games you can pick up in seconds and play for months.</p>
+        <a class="brand" href="index.html" aria-label="Simple Life Games home"><img class="mark" src="slg-icon.svg" alt="" width="46" height="46"><img class="wm" src="wordmark-light.svg" alt="Simple Life Games" height="30"></a>
+        <p>An independent studio making small, cheerful games you can pick up in seconds and play for months.</p>
       </div>
-      <div>
-        <h4>Games</h4>
-        <ul><li><a href="ninja-rooftops.html">Ninja Rooftops</a></li><li><a href="index.html#games">All games</a></li><li><a href="ninja-rooftops.html#beta">Join the beta</a></li></ul>
-      </div>
-      <div>
-        <h4>Studio</h4>
-        <ul><li><a href="index.html#about">About</a></li><li><a href="index.html#videos">Videos</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span data-email>you@example.com</span><button class="copy-btn" type="button">Copy</button></li>
-          <li><a class="contact-line" data-link="discord" href="https://discord.gg/74Zpkr4ST"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 5.3A16.5 16.5 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0L8.5 4a16.5 16.5 0 0 0-4.1 1.3C1.8 9.2 1.1 13 1.4 16.7A16.6 16.6 0 0 0 6.5 19.3l1-1.6a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.8 11.8 0 0 0 11.6 0l.4.3a10.7 10.7 0 0 1-1.7.8l1 1.6a16.5 16.5 0 0 0 5.1-2.6c.4-4.3-.6-8-3-11.4ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg><span>Discord server</span></a></li>
-          <li><a class="contact-line" data-link="youtube" href="https://www.youtube.com/@simplelifegames"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg><span>YouTube @simplelifegames</span></a></li>
-        </ul>
-      </div>
+      <div><h4>Games</h4><ul><li><a href="ninja-rooftops.html">Ninja Rooftops</a></li><li><a href="ninja-rooftops.html#beta">Join the beta</a></li><li><a href="index.html#games">All games</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="index.html#about">About us</a></li><li><a href="index.html#videos">Videos</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      <div><h4>Say hello</h4><ul>
+        <li class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span data-email>you@example.com</span><button class="copy-btn" type="button">Copy</button></li>
+        <li><a class="contact-line" data-link="discord" href="https://discord.gg/74Zpkr4ST"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 5.3A16.5 16.5 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0L8.5 4a16.5 16.5 0 0 0-4.1 1.3C1.8 9.2 1.1 13 1.4 16.7A16.6 16.6 0 0 0 6.5 19.3l1-1.6a10.7 10.7 0 0 1-1.7-.8l.4-.3a11.8 11.8 0 0 0 11.6 0l.4.3a10.7 10.7 0 0 1-1.7.8l1 1.6a16.5 16.5 0 0 0 5.1-2.6c.4-4.3-.6-8-3-11.4ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg><span>Discord server</span></a></li>
+        <li><a class="contact-line" data-link="youtube" href="https://www.youtube.com/@simplelifegames"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15V9l5.8 3-5.8 3Z"/></svg><span>YouTube @simplelifegames</span></a></li>
+      </ul></div>
     </div>
     <div class="legal"><span>© <span data-year>2026</span> Simple Life Games. All rights reserved.</span><span><a href="privacy.html">Privacy Policy</a> · Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
   </div>
 </footer>
 <script src="site.js"></script>
+<script src="audio.js"></script>
 </body>
 </html>
