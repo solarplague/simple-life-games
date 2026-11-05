@@ -1,7 +1,7 @@
 /* ===== Simple Life Games site =====
    EDIT HERE: your contact details and links. Every page reads them from this one place. */
 const SITE = {
-  email: 'you@example.com',                                                            // <- put your contact email here
+  email: 'waterfeelscool@gmail.com',                                                            // <- put your contact email here
   discord: 'https://discord.gg/74Zpkr4ST',
   youtube: 'https://www.youtube.com/@simplelifegames',
   testerGroup: 'https://groups.google.com/g/ninja-rooftops-testers',
