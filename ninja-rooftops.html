@@ -4,21 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ninja Rooftops · Simple Life Games</title>
-<meta name="description" content="Ninja Rooftops by Simple Life Games: a one-tap rooftop runner for Android. Tap. Leap. Land. Climb!">
+<meta name="description" content="Ninja Rooftops is a free one-tap rooftop runner for Android. Climb 500 worlds, beat 50 guardians, duel real players and collect 148 ninja skins.">
 <meta property="og:title" content="Ninja Rooftops · Simple Life Games">
-<meta property="og:description" content="Ninja Rooftops by Simple Life Games: a one-tap rooftop runner for Android. Tap. Leap. Land. Climb!">
-<meta property="og:image" content="https://simplelifegames.com/nr-feature.jpg">
+<meta property="og:description" content="Ninja Rooftops is a free one-tap rooftop runner for Android. Climb 500 worlds, beat 50 guardians, duel real players and collect 148 ninja skins.">
+<meta property="og:image" content="https://simplelifegames.com/nr-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#170c33">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14060a">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600;700&family=Shippori+Mincho+B1:wght@700;800&display=swap">
+<link rel="preload" as="image" href="nr-hero.webp" media="(min-width: 721px)">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="nr-page">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="wrap nav" aria-label="Main">
@@ -29,55 +32,53 @@
 </header>
 
 <main id="main">
-<section class="nr-hero">
-  <canvas class="rooftops" data-size="big" data-ninjas="0,5,7" aria-label="Animated scene: three ninjas run and flip across rooftops under the moon"></canvas>
-  <div class="shade"></div>
+<section class="nr-hero2">
+  <div class="kanji" aria-hidden="true">忍</div>
   <div class="wrap">
     <div class="copy">
-      <div class="nr-logo"><img src="nr-icon.png" alt="Ninja Rooftops app icon" width="88" height="88"><span class="tag">Closed beta on Android</span></div>
-      <h1 class="nr-title">Ninja <span>Rooftops</span></h1>
-      <p class="tagline">Tap. Leap. Land. Climb!</p>
-      <p class="lede">Race across the rooftops as a tiny ninja with a big appetite for height. One tap to jump, a city that changes every ten roofs and a soundtrack for every world. How high can you climb?</p>
-      <div class="btns"><a class="btn btn-yellow" href="#beta">Join the beta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a><a class="btn btn-light" data-link="youtube" href="https://www.youtube.com/@simplelifegames">Watch on YouTube</a></div>
+      <div class="nr-logo"><img src="nr-icon.png" alt="Ninja Rooftops app icon" width="88" height="88"><span class="seal">Free on Android</span></div>
+      <h1 class="nr-title2">Ninja<span>Rooftops</span></h1>
+      <p class="tagline2">Tap. Leap. Land. Climb!</p>
+      <p class="lede">One tap to jump. A city of 500 worlds under a blood-red moon. Beat the Guardians, duel real players and climb higher than anyone in your clan.</p>
+      <div class="btns"><a class="btn btn-gold" href="#beta">Play the beta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="#gallery">See it in action</a></div>
       <p class="live" data-discord hidden><i></i><span></span></p>
     </div>
   </div>
-  <button class="tap-hint" type="button" aria-label="Make the ninjas jump">Tap the city to jump</button>
 </section>
-<div class="cta-bar" aria-hidden="true"><img src="nr-icon.png" alt="" width="44" height="44"><div><b>Ninja Rooftops</b><small>Free closed beta on Android</small></div><a class="btn btn-yellow" href="#beta" tabindex="-1">Join the beta</a></div>
+<div class="cta-bar" aria-hidden="true"><img src="nr-icon.png" alt="" width="44" height="44"><div><b>Ninja Rooftops</b><small>Free on Android</small></div><a class="btn btn-gold" href="#beta" tabindex="-1">Play the beta</a></div>
 
-<section class="section" style="padding-block:64px">
-  <div class="wrap"><div class="stats"><div class="stat reveal" data-d="0.00"><b>500</b><span>worlds to climb</span></div><div class="stat reveal" data-d="0.05"><b>70+</b><span>ninja outfits</span></div><div class="stat reveal" data-d="0.10"><b>80+</b><span>trails &amp; auras</span></div><div class="stat reveal" data-d="0.15"><b>21</b><span>pets to collect</span></div><div class="stat reveal" data-d="0.20"><b>5</b><span>clan bosses</span></div><div class="stat reveal" data-d="0.25"><b>19</b><span>achievements</span></div></div></div>
+<section class="nr-stats">
+  <div class="wrap"><ul class="stats2"><li><b>500</b>worlds</li><li><b>50</b>guardians</li><li><b>148</b>ninja skins</li><li><b>23</b>robo pets</li><li><b>1v1</b>live duels</li><li><b>5</b>clan bosses</li></ul></div>
 </section>
 
-<section class="section tint">
+<section class="nr-sec" id="features">
   <div class="wrap">
-    <div class="section-head"><span class="label">Features</span><h2>Simple to play. Lots to chase.</h2></div>
-    <div class="feats"><div class="feat frame-px reveal" data-d="0.00" style="--c:#ffd98a"><div class="icon"><img src="hoard.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Endless rooftops</h3><p>Tap to jump, tap again in the air. Land on every roof to climb, and hit the center for PERFECT combos and bigger coin hauls.</p></div><div class="feat frame-px reveal" data-d="0.08" style="--c:#c9edff"><div class="icon"><img src="chest.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Chests worth the hype</h3><p>Skin, trail and aura chests with a full rarity reveal. Odds are always shown, and legendary drops feel legendary.</p></div><div class="feat frame-px reveal" data-d="0.16" style="--c:#ffc9b0"><div class="icon"><img src="pet.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Pets that fly with you</h3><p>21 pets to collect, each with its own bonus. Level them up with treats you find on the rooftops.</p></div><div class="feat frame-px reveal" data-d="0.00" style="--c:#ffb3b0"><div class="icon"><img src="oni.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Clans and bosses</h3><p>Team up with up to 100 players, take down five clan bosses, each with its own music, and share the rewards.</p></div><div class="feat frame-px reveal" data-d="0.08" style="--c:#e2c9ff"><div class="icon"><img src="pass.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Dojo Pass seasons</h3><p>A new 28-day season with 30 tiers of rewards on the free track and exclusive items on premium.</p></div><div class="feat frame-px reveal" data-d="0.16" style="--c:#ffd0a8"><div class="icon"><img src="ember.webp" alt="" loading="lazy" width="256" height="256"></div><h3>Hardcore mode</h3><p>One life, no checkpoints. Reach floors 500, 1,500, 3,000 and 5,000 to earn four elemental skins you can only get here.</p></div></div>
+    <div class="nr-head"><span class="kicker">The way of the rooftop</span><h2>Simple to play. Hard to master.</h2></div>
+    <div class="scrolls"><article class="scroll-card reveal" data-d="0.00"><img src="feat-roof.webp" alt="" width="160" height="160" loading="lazy"><h3>Endless rooftops</h3><p>Tap to jump, tap again to double jump. Land dead center for PERFECT combos and bigger coin hauls, and watch the city change every ten roofs.</p></article><article class="scroll-card reveal" data-d="0.06"><img src="feat-chest.webp" alt="" width="160" height="160" loading="lazy"><h3>Chests worth opening</h3><p>Skin, trail and aura chests with a full rarity reveal. Odds are always shown, and an Epic or better is guaranteed at least every 15 chests.</p></article><article class="scroll-card reveal" data-d="0.12"><img src="feat-pet.webp" alt="" width="160" height="160" loading="lazy"><h3>Robo pets</h3><p>23 robo pets fly beside you, and every one gives a bonus. Hatch them from the Robo Pet Chest and level them up as you climb.</p></article><article class="scroll-card reveal" data-d="0.18"><img src="feat-guardian.webp" alt="" width="160" height="160" loading="lazy"><h3>50 Guardians</h3><p>Every hundred floors a Guardian blocks the way. Beat them to claim their legendary gear sets, one dimension at a time.</p></article><article class="scroll-card reveal" data-d="0.00"><img src="feat-duel.webp" alt="" width="160" height="160" loading="lazy"><h3>Duel Arena</h3><p>Race a real player for 30 seconds. Most roofs wins, and you can put up to 250 honor on the line.</p></article><article class="scroll-card reveal" data-d="0.06"><img src="feat-store.webp" alt="" width="160" height="160" loading="lazy"><h3>The Duel Store</h3><p>Eight caped skins, five trails and five auras that exist nowhere else. Honor buys them, and your duel record unlocks them.</p></article><article class="scroll-card reveal" data-d="0.12"><img src="feat-clan.webp" alt="" width="160" height="160" loading="lazy"><h3>Clans and bosses</h3><p>Join a clan of up to 100 ninjas, chat, take down five clan bosses together and share the rewards.</p></article><article class="scroll-card reveal" data-d="0.18"><img src="feat-hardcore.webp" alt="" width="160" height="160" loading="lazy"><h3>Hardcore mode</h3><p>One life, no checkpoints. Reach floors 500, 1,500, 3,000 and 5,000 for four elemental skins you can only earn here.</p></article></div>
   </div>
 </section>
-
-<section class="section">
+<div class="shuriken-rule" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 0l5 15 15 5-15 5-5 15-5-15L0 20l15-5z"/><circle cx="20" cy="20" r="3.5"/></svg></div>
+<section class="nr-sec" id="gallery">
   <div class="wrap">
-    <div class="section-head"><span class="label">The roster</span><h2>Pick your ninja</h2><p class="lede">A few of the outfits waiting on the rooftops, from the classic Shadow to the Godai Avatar, earned only at Hardcore floor 5,000.</p></div>
-    <div class="roster reveal"><div class="ninja-card frame-px"><canvas class="runner" data-n="0" width="160" height="110" aria-hidden="true"></canvas><b>Shadow</b><small>Where it all begins</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="1" width="160" height="110" aria-hidden="true"></canvas><b>Crimson</b><small>Coin shop</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="2" width="160" height="110" aria-hidden="true"></canvas><b>Jade Ronin</b><small>Coin shop</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="3" width="160" height="110" aria-hidden="true"></canvas><b>Golden Shogun</b><small>Coin shop</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="4" width="160" height="110" aria-hidden="true"></canvas><b>Void Phantom</b><small>Coin shop</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="5" width="160" height="110" aria-hidden="true"></canvas><b>Ember Ronin</b><small>Hardcore floor 500</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="6" width="160" height="110" aria-hidden="true"></canvas><b>Glacier Shogun</b><small>Hardcore floor 1,500</small></div><div class="ninja-card frame-px"><canvas class="runner" data-n="7" width="160" height="110" aria-hidden="true"></canvas><b>Godai Avatar</b><small>Hardcore floor 5,000</small></div></div>
+    <div class="nr-head"><span class="kicker">Screenshots</span><h2>See it in action</h2></div>
+    <div class="gallery reveal"><figure class="pv"><img src="preview-run.webp" alt="Tap. Leap. Climb.: One tap to jump across endless rooftops" width="540" height="960" loading="lazy"><figcaption><b>Tap. Leap. Climb.</b>One tap to jump across endless rooftops</figcaption></figure><figure class="pv"><img src="preview-guardian.webp" alt="Beat 50 Guardians: A boss fight every hundred floors" width="540" height="960" loading="lazy"><figcaption><b>Beat 50 Guardians</b>A boss fight every hundred floors</figcaption></figure><figure class="pv"><img src="preview-duel.webp" alt="Duel real players: Most roofs in 30 seconds wins" width="540" height="960" loading="lazy"><figcaption><b>Duel real players</b>Most roofs in 30 seconds wins</figcaption></figure><figure class="pv"><img src="preview-stake.webp" alt="Bet your honor: Stake up to 250 honor on a duel" width="540" height="960" loading="lazy"><figcaption><b>Bet your honor</b>Stake up to 250 honor on a duel</figcaption></figure><figure class="pv"><img src="preview-chest.webp" alt="Unlock legendary gear: Hundreds of skins, trails and auras" width="540" height="960" loading="lazy"><figcaption><b>Unlock legendary gear</b>Hundreds of skins, trails and auras</figcaption></figure><figure class="pv"><img src="preview-pets.webp" alt="Collect robo pets: Every pet gives you a bonus" width="540" height="960" loading="lazy"><figcaption><b>Collect robo pets</b>Every pet gives you a bonus</figcaption></figure><figure class="pv"><img src="preview-duelstore.webp" alt="Exclusive duel gear: Caped skins only duelists can own" width="540" height="960" loading="lazy"><figcaption><b>Exclusive duel gear</b>Caped skins only duelists can own</figcaption></figure><figure class="pv"><img src="preview-menu.webp" alt="Clans, bosses and more: Team up and climb together" width="540" height="960" loading="lazy"><figcaption><b>Clans, bosses and more</b>Team up and climb together</figcaption></figure></div>
   </div>
 </section>
-
-<section class="section tint">
+<div class="shuriken-rule" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 0l5 15 15 5-15 5-5 15-5-15L0 20l15-5z"/><circle cx="20" cy="20" r="3.5"/></svg></div>
+<section class="nr-sec" id="roster">
   <div class="wrap">
-    <div class="section-head"><span class="label">Screenshots</span><h2>A peek at the rooftops</h2></div>
-    <div class="shots reveal"><figure class="shot"><img src="shot-run.jpg" alt="Chain PERFECT landings" loading="lazy" width="360" height="740"><figcaption>Chain PERFECT landings<small>Stack combos for bonus coins</small></figcaption></figure><figure class="shot"><img src="shot-pet.jpg" alt="Hatch legendary pets" loading="lazy" width="360" height="740"><figcaption>Hatch legendary pets<small>Every pet gives a bonus</small></figcaption></figure><figure class="shot"><img src="shot-chest.jpg" alt="Crack open chests" loading="lazy" width="360" height="740"><figcaption>Crack open chests<small>Outfits, trails and auras</small></figcaption></figure><figure class="shot"><img src="shot-menu.jpg" alt="Start from checkpoints" loading="lazy" width="360" height="740"><figcaption>Start from checkpoints<small>Every 50 floors</small></figcaption></figure><figure class="shot"><img src="shot-pass.jpg" alt="Climb the Dojo Pass" loading="lazy" width="360" height="740"><figcaption>Climb the Dojo Pass<small>30 tiers every season</small></figcaption></figure></div>
+    <div class="nr-head"><span class="kicker">The roster</span><h2>148 ninjas to become</h2><p class="lede">Every skin is drawn in game. Some sit in the coin shop, some drop from chests, and the best ones are earned on the hardest rooftops and in the Duel Arena.</p></div>
+    <div class="skins reveal"><div class="skin-card"><img src="skin-shadow.webp" alt="Shadow ninja skin" width="240" height="195" loading="lazy"><b>Shadow</b><small>Where every ninja starts</small></div><div class="skin-card"><img src="skin-golden.webp" alt="Golden Shogun ninja skin" width="240" height="195" loading="lazy"><b>Golden Shogun</b><small>Coin shop</small></div><div class="skin-card"><img src="skin-kitsune.webp" alt="Spirit Kitsune ninja skin" width="240" height="195" loading="lazy"><b>Spirit Kitsune</b><small>Legendary chest drop</small></div><div class="skin-card"><img src="skin-shuten.webp" alt="Shuten Mythborn ninja skin" width="240" height="195" loading="lazy"><b>Shuten Mythborn</b><small>Guardian gear set</small></div><div class="skin-card"><img src="skin-raijin.webp" alt="Raijin's Wrath ninja skin" width="240" height="195" loading="lazy"><b>Raijin's Wrath</b><small>Hardcore floor 3,000</small></div><div class="skin-card"><img src="skin-godai.webp" alt="Godai Avatar ninja skin" width="240" height="195" loading="lazy"><b>Godai Avatar</b><small>Hardcore floor 5,000</small></div><div class="skin-card"><img src="skin-oni.webp" alt="Oni Executioner ninja skin" width="240" height="195" loading="lazy"><b>Oni Executioner</b><small>Duel Store</small></div><div class="skin-card"><img src="skin-emperor.webp" alt="Blade Emperor ninja skin" width="240" height="195" loading="lazy"><b>Blade Emperor</b><small>Duel Store · Mythic</small></div></div>
   </div>
 </section>
-
-<section class="section" id="beta">
+<div class="shuriken-rule" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 0l5 15 15 5-15 5-5 15-5-15L0 20l15-5z"/><circle cx="20" cy="20" r="3.5"/></svg></div>
+<section class="nr-sec" id="beta">
   <div class="wrap">
-    <div class="section-head"><span class="label">Closed beta &middot; free</span><h2>Play it before everyone else</h2><p class="lede">Ninja Rooftops is in closed testing on Google Play. Joining takes about a minute, and testers get a real say in what comes next.</p></div>
+    <div class="nr-head"><span class="kicker">Closed beta · free</span><h2>Climb before everyone else</h2><p class="lede">Ninja Rooftops is in closed testing on Google Play ahead of launch. Joining takes about a minute, and testers get a real say in what comes next.</p></div>
     <div class="steps">
-      <div class="step frame-px"><h3>Join the tester group</h3><p>Join our Google Group with the Google account you use on your phone. That puts you on the tester list.</p><a class="btn" data-link="testerGroup" href="https://groups.google.com/g/ninja-rooftops-testers">Join the group</a></div>
-      <div class="step frame-px"><h3>Become a tester</h3><p>Open the Google Play testing page and tap <strong>Become a tester</strong>. Give it a few minutes to update.</p><a class="btn" data-link="playTesting" href="https://play.google.com/apps/testing/com.simplelifegames.ninjarooftops">Open testing page</a></div>
-      <div class="step frame-px"><h3>Install and play</h3><p>Download Ninja Rooftops from Google Play, then tell us what you think on Discord.</p><a class="btn" data-link="discord" href="https://discord.gg/74Zpkr4ST">Share feedback</a></div>
+      <div class="step"><h3>Join the tester group</h3><p>Join our Google Group with the Google account you use on your phone. That puts you on the tester list.</p><a class="btn btn-gold" data-link="testerGroup" href="https://groups.google.com/g/ninja-rooftops-testers">Join the group</a></div>
+      <div class="step"><h3>Become a tester</h3><p>Open the Google Play testing page and tap <strong>Become a tester</strong>. Give it a few minutes to update.</p><a class="btn btn-gold" data-link="playTesting" href="https://play.google.com/apps/testing/com.simplelifegames.ninjarooftops">Open testing page</a></div>
+      <div class="step"><h3>Install and play</h3><p>Download Ninja Rooftops from Google Play, then tell us what you think in the feedback forum on Discord.</p><a class="btn btn-gold" data-link="discord" href="https://discord.gg/74Zpkr4ST">Share feedback</a></div>
     </div>
   </div>
 </section>
