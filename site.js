@@ -199,7 +199,7 @@ const SITE = {
   }
 
   // ---------- game page: a slim "Join the beta" bar once the hero is gone, hidden again at the beta section ----------
-  const bar = document.querySelector('.cta-bar'), heroEl = document.querySelector('.nr-hero'), betaEl = document.getElementById('beta');
+  const bar = document.querySelector('.cta-bar'), heroEl = document.querySelector('.nr-hero, .nr-hero2'), betaEl = document.getElementById('play') || document.getElementById('beta');
   if (bar && heroEl) {
     const upd = () => { const hb = heroEl.getBoundingClientRect().bottom, bt = betaEl ? betaEl.getBoundingClientRect() : null, atBeta = bt && bt.top < innerHeight * 0.9 && bt.bottom > 0, show = hb < 0 && !atBeta;
       bar.classList.toggle('show', show); document.body.classList.toggle('cta-on', show); bar.setAttribute('aria-hidden', !show); bar.querySelector('a').tabIndex = show ? 0 : -1; };

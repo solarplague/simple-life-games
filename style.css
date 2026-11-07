@@ -467,3 +467,8 @@ th { font-family: var(--head); font-weight: 600; background: var(--yellow); }
 .home .btn { white-space: nowrap; }
 .home #studio { padding-top: 64px; }
 .home #games { padding-bottom: 40px; }
+.btn svg[viewBox="0 0 24 24"] path[fill] { fill: currentColor; }
+.get-game { display: flex; align-items: center; gap: 44px; padding: 44px 48px; border: 1px solid rgba(227, 180, 90, .45); background: radial-gradient(ellipse at 15% 50%, rgba(184, 32, 44, .35), transparent 60%), linear-gradient(180deg, var(--lac-3), var(--lac-2)); }
+.get-game img { width: 160px; height: 160px; flex: none; border-radius: 36px; border: 3px solid var(--gold); box-shadow: 0 20px 40px rgba(0, 0, 0, .5); }
+.get-game h2 { color: #fff3dc; }
+@media (max-width: 720px) { .get-game { flex-direction: column; align-items: flex-start; gap: 24px; padding: 32px 24px; } .get-game img { width: 112px; height: 112px; border-radius: 26px; } }
