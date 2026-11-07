@@ -2,7 +2,7 @@
    EDIT HERE: your contact details and links. Every page reads them from this one place. */
 const SITE = {
   email: 'waterfeelscool@gmail.com',                                                            // <- put your contact email here
-  discord: 'https://discord.gg/74Zpkr4ST',
+  discord: 'https://discord.gg/gemJWqvP2p',
   youtube: 'https://www.youtube.com/@simplelifegames',
   testerGroup: 'https://groups.google.com/g/ninja-rooftops-testers',
   playTesting: 'https://play.google.com/apps/testing/com.simplelifegames.ninjarooftops',   // closed-beta opt-in page
