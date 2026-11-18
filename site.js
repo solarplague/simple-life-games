@@ -242,3 +242,26 @@ const SITE = {
     img.complete ? requestAnimationFrame(frame) : img.addEventListener('load', () => requestAnimationFrame(frame));
   });
 })();
+
+/* ---------- homepage hero carousel ---------- */
+(() => {
+  const stage = document.querySelector('[data-carousel]'); if (!stage) return;
+  const slides = [...stage.querySelectorAll('.slide')], tabs = [...stage.querySelectorAll('.pager button')], DUR = 7000;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let i = 0, t = null;
+  stage.style.setProperty('--dur', DUR + 'ms');
+  const show = n => {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle('is-on', k === i); s.setAttribute('aria-hidden', k !== i); s.querySelectorAll('a').forEach(a => a.tabIndex = k === i ? 0 : -1); });
+    tabs.forEach((b, k) => { b.setAttribute('aria-selected', k === i); const bar = b.querySelector('i'); bar.replaceWith(bar.cloneNode()); });
+  };
+  const play = () => { clearInterval(t); if (!reduce) t = setInterval(() => show(i + 1), DUR); };
+  tabs.forEach((b, k) => b.addEventListener('click', () => { show(k); play(); }));
+  if (reduce) stage.classList.add('static');
+  stage.addEventListener('mouseenter', () => { clearInterval(t); stage.classList.add('paused'); });
+  stage.addEventListener('mouseleave', () => { stage.classList.remove('paused'); show(i); play(); });
+  let x0 = null;
+  stage.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { show(i + (dx < 0 ? 1 : -1)); play(); } x0 = null; });
+  show(0); play();
+})();
