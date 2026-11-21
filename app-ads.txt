@@ -4,6 +4,9 @@ ownerdomain=simplelifegames.com
 # Google AdMob
 google.com, pub-9626562151484108, DIRECT, f08c47fec0942fa0
 
+# Liftoff Monetize (Vungle)
+vungle.com, 6b012c2199868b3b5efc5a6a, DIRECT, c107d686becd2d77
+
 # Unity Ads (from the Unity dashboard, Nov 2026)
 loopme.com, 11463, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 20775, RESELLER, 6c8d5f95897a5a3b
